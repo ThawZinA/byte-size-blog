@@ -1,0 +1,56 @@
+---
+title: "JavaScript Async Patterns"
+abstract: "Explore modern JavaScript asynchronous programming patterns including Promises, async/await, and error handling."
+publishedOn: "2024-01-05"
+---
+
+# JavaScript Async Patterns
+
+Asynchronous programming is essential in modern JavaScript. Let's explore the key patterns for handling async operations.
+
+## Promises
+
+Promises provide a cleaner way to handle asynchronous operations:
+
+\`\`\`javascript
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+\`\`\`
+
+## Async/Await
+
+The async/await syntax makes asynchronous code look synchronous:
+
+\`\`\`javascript
+async function fetchData() {
+  try {
+    const response = await fetch('/api/data');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+\`\`\`
+
+## Error Handling
+
+Proper error handling is crucial in async code:
+
+\`\`\`javascript
+async function safeApiCall() {
+  try {
+    const result = await riskyOperation();
+    return { success: true, data: result };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
+\`\`\`
+
+Understanding these patterns will help you write more reliable and maintainable JavaScript code.
+\`\`\`
+
+```ts file="" isHidden
