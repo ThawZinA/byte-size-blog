@@ -17,7 +17,7 @@ export default function Logo({ mobileAlignment = "left", className }: LogoProps)
         className,
       )}
     >
-      Bits & Bytes
+      Byte Size Blog
     </Link>
   )
 }
