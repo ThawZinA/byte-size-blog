@@ -31,6 +31,12 @@ export default function Header({ className, ...props }: HeaderProps) {
         <Logo />
 
         <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" asChild>
+            <a href="/rss" aria-label="View RSS feed">
+              <Rss className="h-5 w-5" style={{ transform: "translate(2px, -2px)" }} />
+              <VisuallyHidden>View RSS feed</VisuallyHidden>
+            </a>
+          </Button>
 
           <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
